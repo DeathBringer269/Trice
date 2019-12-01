@@ -1,0 +1,163 @@
+#################################################################################################################################
+# # # # # # --- Basic i3 configuration --- # # # # # # 
+# # # # # # --- Config by Alan Dsilva --- # # # # # # 
+# # # # # # --- References taken from configuration of Luke Smith<Voidrice>, Erik Dubois<ArcoLinux> --- # # # # # # <++>
+#################################################################################################################################
+for_window [class="^.*"] border pixel 2
+gaps inner 10
+gaps outer 10
+set $mod Mod4
+font pango:DejaVu Sans Mono 10
+set $term --no-startup-id $TERMINAL
+
+#################################################################################################################################
+# # # # # # --- Status bar --- # # # # # # 
+#################################################################################################################################
+bar {
+	status_command i3blocks
+}
+
+#################################################################################################################################
+# # # # # # --- Workspace configuration --- # # # # # # 
+#################################################################################################################################
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+#################################################################################################################################
+# # # # # # --- Switch to workspace --- # # # # # # 
+#################################################################################################################################
+bindsym $mod+1		workspace $ws1
+bindsym $mod+2		workspace $ws2
+bindsym $mod+3		workspace $ws3
+bindsym $mod+4		workspace $ws4
+bindsym $mod+5		workspace $ws5
+bindsym $mod+6		workspace $ws6
+bindsym $mod+7		workspace $ws7
+bindsym $mod+8		workspace $ws8
+bindsym $mod+9		workspace $ws9
+bindsym $mod+0		workspace $ws10
+
+#################################################################################################################################
+# # # # # # --- Move to workspace --- # # # # # # 
+#################################################################################################################################
+bindsym $mod+Shift+1	move container to workspace $ws1
+bindsym $mod+Shift+2	move container to workspace $ws2
+bindsym $mod+Shift+3	move container to workspace $ws3
+bindsym $mod+Shift+4	move container to workspace $ws4
+bindsym $mod+Shift+5	move container to workspace $ws5
+bindsym $mod+Shift+6	move container to workspace $ws6
+bindsym $mod+Shift+7	move container to workspace $ws7
+
+#################################################################################################################################
+# # # # # # --- Application configuration --- # # # # # #   
+#################################################################################################################################
+for_window [class="Pinentry"] sticky enable
+for_window [class="sent"] border pixel 0px
+for_window [title="GIMP Startup"] move workspace $ws5
+for_window [class="Gimp"] move workspace $ws5
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+for_window [window_role="GtkFileChooserDialog"] move position center
+for_window [title="Default - Wine desktop"] floating enable
+
+#################################################################################################################################
+# # # # # # --- Special key bindings --- # # # # # # 
+#################################################################################################################################
+
+bindsym $mod+Return		exec $term
+bindsym $mod+Shift+Return
+
+bindsym $mod+Home		workspace $ws1
+bindsym $mod+Shift+Home		move container to workspace $ws1
+
+bindsym $mod+End		workspace $ws10
+bindsym $mod+Shift+End		move container to workspace $ws10
+
+bindsym $mod+Prior		workspace prev
+bindsym $mod+Shift+Prior	move container to workspace prev
+
+bindsym $mod+Next		workspace next
+bindsym $mod+Shift+Next		move container to workspace next
+
+bindsym $mod+Tab		workspace back_and_forth
+
+# bindsym $mod+XF86Back			workspace prev
+# bindsym $mod+Shift+XF86Back		move container to workspace prev
+
+# bindsym $mod+XF86Forward		workspace next
+# bindsym $mod+Shift+XF86Forward	move container to workspace next
+
+bindsym $mod+semicolon		workspace next
+
+bindsym $mod+apostrophe		split horizontal ;; exec $term
+
+bindsym $mod+slash		split vertical ;; exec $term
+bindsym $mod+Shift+slash	kill
+
+bindsym $mod+backslash		workspace back_and_forth
+
+#################################################################################################################################
+# # # # # # --- Letter key bindings --- # # # # # # 
+#################################################################################################################################
+
+bindsym $mod+d			exec dmenu_run
+# bindsym $mod+shift+d		
+
+bindsym $mod+h 			focus left
+bindsym $mod+Shift+h		move left
+
+bindsym $mod+j			focus down
+bindsym $mod+Shift+j 		move down
+
+bindsym $mod+k 			focus up
+bindsym $mod+Shift+k 		move up
+
+bindsym $mod+l 			focus right
+bindsym $mod+Shift+l 		move right
+
+bindsym $mod+f 			fullscreen toggle
+
+bindsym $mod+q 			kill
+# bindsym $mod+Shift+q
+
+bindsym $mod+r			reload
+bindsym $mod+Shift+r 		mode "resize"
+
+bindsym $mod+x 			mode "$mode_system"
+set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown //incomplete
+mode "$mode_system" {
+	bindsym k exec i3lock, mode "default"
+	bindsym l exec exit, mode "default"
+	bindsym u exec suspend, mode "default"
+	bindysm h exec hibernate, mode "default"
+	bindsym r exec reboot, mode "default"
+	bindsym s exec shoutdown, mode "default"
+
+	# Back to normal
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+
+#################################################################################################################################
+# # # # # # --- Arrow key bindings --- # # # # # #   
+#################################################################################################################################
+bindsym $mod+Left		focus left
+bindsym $mod+Ctrl+Left		move workspace to output left
+bindsym $mod+Down		focus down
+bindsym $mod+Ctrl+Down		move workspace to output down
+bindsym $mod+Up			focus up
+bindsym $mod+Ctrl+Up		move workspace to output up
+bindsym $mod+Right 		focus right
+bindsym $mod+Ctrl+Right		move workspace to output right
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right 	move right
