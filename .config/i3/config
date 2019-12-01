@@ -30,7 +30,7 @@ bar {
 	colors {
 		background #2F2F2F
 		statusline #eeeeee
-		seperator #666666
+		#seperator #666666
 		# 			border	backgr.	text
 		focused_workspace	#a9a9a9 #5f676a #eeeeee
 		active_workspace 	#a9a9a9 #5f676a #a9a9a9
@@ -95,7 +95,7 @@ for_window [title="Default - Wine desktop"] floating enable
 #################################################################################################################################
 
 bindsym $mod+Return		exec $term
-bindsym $mod+Shift+Return
+# bindsym $mod+Shift+Return
 
 bindsym $mod+Home		workspace $ws1
 bindsym $mod+Shift+Home		move container to workspace $ws1
@@ -154,8 +154,9 @@ bindsym $mod+Shift+l 		move right
 bindsym $mod+q 			kill
 # bindsym $mod+Shift+q
 
-bindsym $mod+r			reload
-bindsym $mod+Shift+r 		mode "resize"
+bindsym $mod+r			exec ranger
+bindsym $mod+Shift+r 		reload
+# needs binding for resize
 
 bindsym $mod+v			split toggle
 # bindsym $mod+Shift+v		
