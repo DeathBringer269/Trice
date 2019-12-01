@@ -1,20 +1,43 @@
+#########################################################################################################################
+#				# # # # # # --- Config by Alan Dsilva --- # # # # # #					#
+#  # # # # # # --- References taken from configuration of Luke Smith<Voidrice>, Erik Dubois<ArcoLinux> --- # # # # # #	#
+#########################################################################################################################
+
+# Mod4 - Super key
+# Mod1 - Alt key
+# Control -Ctrl key
+# Shift - Shift key
+# Escape - Esc key
+# Return - Enter key
+# KP_Enter - Keypad Enter key
+# Tab - Tab key
+
 #################################################################################################################################
-# # # # # # --- Basic i3 configuration --- # # # # # # 
-# # # # # # --- Config by Alan Dsilva --- # # # # # # 
-# # # # # # --- References taken from configuration of Luke Smith<Voidrice>, Erik Dubois<ArcoLinux> --- # # # # # # <++>
+				# # # # # # --- Basic i3 configuration --- # # # # # # 
 #################################################################################################################################
 for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 10
 set $mod Mod4
-font pango:DejaVu Sans Mono 10
 set $term --no-startup-id $TERMINAL
+font pango:DejaVu Sans Mono 10
 
 #################################################################################################################################
-# # # # # # --- Status bar --- # # # # # # 
+					# # # # # # --- Status bar --- # # # # # # 
 #################################################################################################################################
 bar {
 	status_command i3blocks
+	colors {
+		background #2F2F2F
+		statusline #eeeeee
+		seperator #666666
+		# 			border	backgr.	text
+		focused_workspace	#a9a9a9 #5f676a #eeeeee
+		active_workspace 	#a9a9a9 #5f676a #a9a9a9
+		inactive_workspace 	#a9a9a9 #222222 #a9a9a9
+		urgent_workspace 	#a9a9a9 #d42121 #FFFFFF
+	}
+
 }
 
 #################################################################################################################################
@@ -107,8 +130,14 @@ bindsym $mod+backslash		workspace back_and_forth
 # # # # # # --- Letter key bindings --- # # # # # # 
 #################################################################################################################################
 
+bindsym $mod+b 			bar mode toggle
+# bindsym $mod+Shift+b
+
 bindsym $mod+d			exec dmenu_run
-# bindsym $mod+shift+d		
+# bindsym $mod+Shift+d		
+
+bindsym $mod+f 			fullscreen toggle
+# bindsym $mod+Shift+f
 
 bindsym $mod+h 			focus left
 bindsym $mod+Shift+h		move left
@@ -122,23 +151,24 @@ bindsym $mod+Shift+k 		move up
 bindsym $mod+l 			focus right
 bindsym $mod+Shift+l 		move right
 
-bindsym $mod+f 			fullscreen toggle
-
 bindsym $mod+q 			kill
 # bindsym $mod+Shift+q
 
 bindsym $mod+r			reload
 bindsym $mod+Shift+r 		mode "resize"
 
+bindsym $mod+v			split toggle
+# bindsym $mod+Shift+v		
+
 bindsym $mod+x 			mode "$mode_system"
 set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown //incomplete
 mode "$mode_system" {
-	bindsym k exec i3lock, mode "default"
-	bindsym l exec exit, mode "default"
-	bindsym u exec suspend, mode "default"
-	bindysm h exec hibernate, mode "default"
-	bindsym r exec reboot, mode "default"
-	bindsym s exec shoutdown, mode "default"
+	bindsym k exec --no-startup-id i3exit lock, mode "default"
+	bindsym l exec --no-startup-id i3exit logout, mode "default"
+	bindsym u exec --no-startup-id i3exit suspend, mode "default"
+	bindysm h exec --no-startup-id i3exit hibernate, mode "default"
+	bindsym r exec --no-startup-id i3exit reboot, mode "default"
+	bindsym s exec --no-startup-id i3exit shutdown, mode "default"
 
 	# Back to normal
 	bindsym Return mode "default"
@@ -161,3 +191,4 @@ bindsym $mod+Shift+Left		move left
 bindsym $mod+Shift+Down		move down
 bindsym $mod+Shift+Up		move up
 bindsym $mod+Shift+Right 	move right
+
