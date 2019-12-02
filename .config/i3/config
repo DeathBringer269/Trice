@@ -11,10 +11,9 @@
 # Return - Enter key
 # KP_Enter - Keypad Enter key
 # Tab - Tab key
-
-#################################################################################################################################
-				# # # # # # --- Basic i3 configuration --- # # # # # # 
-#################################################################################################################################
+#########################################################################################################################
+#				# # # # # # --- Basic i3 configuration --- # # # # # # 					#
+#########################################################################################################################
 for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 10
@@ -22,9 +21,9 @@ set $mod Mod4
 set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono 10
 
-#################################################################################################################################
-					# # # # # # --- Status bar --- # # # # # # 
-#################################################################################################################################
+#########################################################################################################################
+#					# # # # # # --- Status bar --- # # # # # # 					#
+#########################################################################################################################
 bar {
 	status_command i3blocks
 	colors {
@@ -130,6 +129,9 @@ bindsym $mod+backslash		workspace back_and_forth
 # # # # # # --- Letter key bindings --- # # # # # # 
 #################################################################################################################################
 
+# bindsym $mod+a 			
+# bindsym $mod+Shift+a 
+
 bindsym $mod+b 			bar mode toggle
 # bindsym $mod+Shift+b
 
@@ -165,6 +167,12 @@ bindsym $mod+v			split toggle
 # bindsym $mod+Shift+v		
 
 bindsym $mod+x 			mode "$mode_system" 
+# bindsym $mod+Shift+x	
+
+# bindsym $mod+z 			
+# bindsym $mod+Shift+z
+
+# mode_system configuration
 set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown //incomplete
 mode "$mode_system" {
 	bindsym k exec --no-startup-id i3exit lock, mode "default"
