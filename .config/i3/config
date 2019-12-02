@@ -164,7 +164,7 @@ bindsym $mod+Shift+s 		scratchpad show
 bindsym $mod+v			split toggle
 # bindsym $mod+Shift+v		
 
-bindsym $mod+x 			mode "$mode_system"
+bindsym $mod+x 			mode "$mode_system" 
 set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown //incomplete
 mode "$mode_system" {
 	bindsym k exec --no-startup-id i3exit lock, mode "default"
