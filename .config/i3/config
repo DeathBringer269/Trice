@@ -146,16 +146,17 @@ bindsym $mod+d			exec dmenu_run
 bindsym $mod+f 			fullscreen toggle
 # bindsym $mod+Shift+f
 
-bindsym $mod+h 			focus left
+# bindsym $mod+h 			
 bindsym $mod+Shift+h		move left
 
-bindsym $mod+j			focus down
+# Note: Removed 'h' and 'l' keys to move around as they are not used as much. Typing the 'h' key becomes tedious as your finger is already on 'j' key. So i have remaped 'j' as move left and 'k' as move up. The navigation keys still work the same.
+bindsym $mod+j			focus left
 bindsym $mod+Shift+j 		move down
 
 bindsym $mod+k 			focus up
 bindsym $mod+Shift+k 		move up
 
-bindsym $mod+l 			focus right
+# bindsym $mod+l 			
 bindsym $mod+Shift+l 		move right
 
 bindsym $mod+q 			kill
