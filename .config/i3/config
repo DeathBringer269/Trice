@@ -24,7 +24,7 @@ font pango:DejaVu Sans Mono 10
 #########################################################################################################################
 #				# # # # # # --- Startup Applications --- # # # # # # 					#
 #########################################################################################################################
-exec_always --no-startup-id xwallpaper --zoom ~/wall.jpg
+exec_always --no-startup-id xwallpaper --zoom ~/Pictures/wall.jpg
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
@@ -131,7 +131,7 @@ bindsym $mod+Shift+slash	kill
 bindsym $mod+backslash		workspace back_and_forth
 
 #################################################################################################################################
-# # # # # # --- Letter key bindings --- # # # # # # 
+# # # # # # --- letter key bindings --- # # # # # # 
 #################################################################################################################################
 
 # bindsym $mod+a 			
@@ -193,11 +193,23 @@ mode "$mode_system" {
 	bindsym Escape mode "default"
 }
 #########################################################################################################################
-#		       	# # # # # # --- function key bindings --- # # # # # #   					#
+# # # # # # # --- function key bindings(F1,etc) done in sxhkd config(~/.config/sxhkd/sxhkdrc) --- # # # # # #   #
 #########################################################################################################################
 
-bindsym $mod+F1 		
-# bindsym $mod+Shift+F1 		//mute
+# bindsym $mod+F1 		
+bindsym $mod+Shift+F1 	exec st	
+
+bindsym $mod+F2 			exec st
+bindsym $mod+Shift+F2			pamixer -d 5
+
+# bindsym $mod+F3
+bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# bindsym $mod+F4
+# bindsym $mod+Shift+F4
+
+# bindsym $mod+F5
+# bindsym $mod+Shift+F5
 
 #########################################################################################################################
 #				# # # # # # --- arrow key bindings --- # # # # # #   					#

@@ -6,7 +6,7 @@ case "$1" in
         betterlockscreen -l
         ;;
     logout)
-        i3-msg exit
+       	i3-msg exit
         ;;
     suspend)
         betterlockscreen -l | systemctl suspend
