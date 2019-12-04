@@ -101,6 +101,12 @@ for_window [title="Default - Wine desktop"] floating enable
 bindsym $mod+Return		exec $term
 # bindsym $mod+Shift+Return
 
+bindsym $mod+Shift+space 	floating toggle
+bindsym $mod+space 		focus mode_toggle
+
+# bindsym $mod+Escape 		
+# bindsym $mod+Shift+Escape
+
 bindsym $mod+Home		workspace $ws1
 bindsym $mod+Shift+Home		move container to workspace $ws1
 
