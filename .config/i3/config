@@ -24,7 +24,7 @@ font pango:DejaVu Sans Mono 10
 #########################################################################################################################
 #				# # # # # # --- Startup Applications --- # # # # # # 					#
 #########################################################################################################################
-exec_always --no-startup-id xwallpaper --zoom ~/Pictures/wall.jpg
+# exec_always --no-startup-id xwallpaper --zoom ~/Pictures/wall.jpg
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
@@ -162,7 +162,7 @@ bindsym $mod+Shift+l 		move right
 bindsym $mod+q 			kill
 # bindsym $mod+Shift+q
 
-bindsym $mod+r			exec ranger
+# bindsym $mod+r		executes ranger; ~/.config/sxhkd/sxhkdrc
 bindsym $mod+Shift+r 		reload
 # needs binding for resize
 
