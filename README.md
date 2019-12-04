@@ -7,6 +7,7 @@ Named Trice because i use two machines, a desktop pc 'Lenovo ThinkCenter' and a 
 Dependencies:
 	i3-gaps,"i3 window manager but with gaps",
 	sxhkd,"simple x hot key daemon. for key bindings unrelated to i3"
+	xcompmgr,"compositor" //may change to compton later
 	ranger,"terminal based file manager"
 	
 Optional Dependencies:
