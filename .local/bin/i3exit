@@ -9,7 +9,7 @@ case "$1" in
        	i3-msg exit
         ;;
     suspend)
-        betterlockscreen -l | systemctl suspend
+        i3lock -B=sigma -k | systemctl suspend
         ;;
     hibernate)
         systemctl hibernate
