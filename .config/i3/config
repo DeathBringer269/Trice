@@ -22,9 +22,12 @@ set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono 10
 
 #########################################################################################################################
-#				# # # # # # --- Startup Applications --- # # # # # # 					#
+#				# # # # # # --- Assign windows --- # # # # # # 					#
 #########################################################################################################################
-# exec_always --no-startup-id xwallpaper --zoom ~/Pictures/wall.jpg
+
+assign [class="firefox"] $ws2
+assign [class="Google-chrome"] $ws2
+assign [class="Steam"] $ws10
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
@@ -48,7 +51,7 @@ bar {
 #                            # # # # # # --- Workspace configuration --- # # # # # #                                    #
 #########################################################################################################################
 set $ws1 "1"
-set $ws2 "2"
+set $ws2 "2: Web"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -56,7 +59,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "3: Games"
 
 #########################################################################################################################
 #                           # # # # # # --- Switch to workspace --- # # # # # #                                         #
@@ -135,36 +138,52 @@ bindsym $mod+Shift+slash	kill
 
 bindsym $mod+backslash		workspace back_and_forth
 
+bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-id lmc pause ; exec --no-startup-id pauseallmpv; workspace 0; exec $term -e htop ; exec $term -e $FILE
 
 #########################################################################################################################
 #                          # # # # # # --- letter key bindings --- # # # # # #                                          #
 #########################################################################################################################
-# bindsym $mod+a
+# bindsym $mod+a 		//luke has set to calculator;  i switch to gui based calc
 # bindsym $mod+Shift+a
 
 bindsym $mod+b 			bar mode toggle
 # bindsym $mod+Shift+b
 
+# bindsym $mod+c 			//open calender and other utils
+# bindsym $mod+Shift+c
+
 bindsym $mod+d			exec dmenu_run
 # bindsym $mod+Shift+d
+
+# bindsym $mod+e
+# bindsym $mod+Shift+e
 
 bindsym $mod+f 			fullscreen toggle
 # bindsym $mod+Shift+f
 
-# bindsym $mod+h 			exec $term; exec $term ; layout tabbed
-bindsym $mod+Shift+h		move left
+bindsym $mod+g 			gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Shift+g 		gaps inner current set 10; gaps outer current set 10
+
+bindsym $mod+h 			focus right
+bindsym $mod+Shift+h		exec --no-startup-id i3resize left
+
+bindsym $mod+i			gaps inner current minus 5
+binsdym $mod+Shift+i		gaps inner current plus 5
 
 bindsym $mod+j			focus left
-bindsym $mod+Shift+j 		move down
+bindsym $mod+Shift+j 		exec --no-startup-id i3resize down
 
 bindsym $mod+k 			focus up
-bindsym $mod+Shift+k 		move up
+bindsym $mod+Shift+k 		exec --no-startup-id i3resize up
 
-# bindsym $mod+l
-bindsym $mod+Shift+l 		move right
+bindsym $mod+l		focus down
+bindsym $mod+Shift+l 		exec --no-startup-id i3-resize right
 
-bindsym $mod+q 			kill
-# bindsym $mod+Shift+q
+bindsym $mod+o 			gaps outer current minus 5
+bindsym $mod+Shift+o		gaps outer current plus 5
+
+bindsym $mod+q 			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
 # bindsym $mod+r		executes ranger; ~/.config/sxhkd/sxhkdrc
 bindsym $mod+Shift+r 		reload
