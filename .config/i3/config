@@ -1,1 +1,239 @@
-/home/deathbringer/.config/i3/config
+#########################################################################################################################
+#                          # # # # # # --- Config by Alan Dsilva --- # # # # # #					#
+#  # # # # # # --- References taken from configuration of Luke Smith<Voidrice>, Erik Dubois<ArcoLinux> --- # # # # # #	#
+#########################################################################################################################
+
+# Mod4 - Super key
+# Mod1 - Alt key
+# Control -Ctrl key
+# Shift - Shift key
+# Escape - Esc key
+# Return - Enter key
+# KP_Enter - Keypad Enter key
+# Tab - Tab key
+#########################################################################################################################
+#				# # # # # # --- Basic i3 configuration --- # # # # # # 					#
+#########################################################################################################################
+for_window [class="^.*"] border pixel 2
+gaps inner 10
+gaps outer 10
+set $mod Mod4
+set $term --no-startup-id $TERMINAL
+font pango:DejaVu Sans Mono 10
+
+#########################################################################################################################
+#				# # # # # # --- Startup Applications --- # # # # # # 					#
+#########################################################################################################################
+# exec_always --no-startup-id xwallpaper --zoom ~/Pictures/wall.jpg
+
+#########################################################################################################################
+#					# # # # # # --- Status bar --- # # # # # # 					#
+#########################################################################################################################
+bar {
+	status_command i3blocks
+	colors {
+		background #2F2F2F
+		statusline #eeeeee
+		#seperator #666666
+		# 			border	backgr.	text
+		focused_workspace	#a9a9a9 #5f676a #eeeeee
+		active_workspace 	#a9a9a9 #5f676a #a9a9a9
+		inactive_workspace 	#a9a9a9 #222222 #a9a9a9
+		urgent_workspace 	#a9a9a9 #d42121 #FFFFFF
+	}
+
+}
+
+#########################################################################################################################
+#                            # # # # # # --- Workspace configuration --- # # # # # #                                    #
+#########################################################################################################################
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+#########################################################################################################################
+#                           # # # # # # --- Switch to workspace --- # # # # # #                                         #
+#########################################################################################################################
+bindsym $mod+1		workspace $ws1
+bindsym $mod+2		workspace $ws2
+bindsym $mod+3		workspace $ws3
+bindsym $mod+4		workspace $ws4
+bindsym $mod+5		workspace $ws5
+bindsym $mod+6		workspace $ws6
+bindsym $mod+7		workspace $ws7
+bindsym $mod+8		workspace $ws8
+bindsym $mod+9		workspace $ws9
+bindsym $mod+0		workspace $ws10
+
+#################################################################################################################################
+# # # # # # --- Move to workspace --- # # # # # #
+#################################################################################################################################
+bindsym $mod+Shift+1	move container to workspace $ws1
+bindsym $mod+Shift+2	move container to workspace $ws2
+bindsym $mod+Shift+3	move container to workspace $ws3
+bindsym $mod+Shift+4	move container to workspace $ws4
+bindsym $mod+Shift+5	move container to workspace $ws5
+bindsym $mod+Shift+6	move container to workspace $ws6
+bindsym $mod+Shift+7	move container to workspace $ws7
+
+#########################################################################################################################
+#                           # # # # # # --- Application configuration --- # # # # # #                                   #
+#########################################################################################################################
+for_window [class="Pinentry"] sticky enable
+for_window [class="sent"] border pixel 0px
+for_window [title="GIMP Startup"] move workspace $ws5
+for_window [class="Gimp"] move workspace $ws5
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+for_window [window_role="GtkFileChooserDialog"] move position center
+for_window [title="Default - Wine desktop"] floating enable
+
+#########################################################################################################################
+#                               # # # # # # --- Special key bindings --- # # # # # #                                    #
+#########################################################################################################################
+bindsym $mod+Return		exec $term
+# bindsym $mod+Shift+Return
+
+bindsym $mod+Shift+space 	floating toggle
+bindsym $mod+space 		focus mode_toggle
+
+# bindsym $mod+Escape
+# bindsym $mod+Shift+Escape
+
+bindsym $mod+Home		workspace $ws1
+bindsym $mod+Shift+Home		move container to workspace $ws1
+
+bindsym $mod+End		workspace $ws10
+bindsym $mod+Shift+End		move container to workspace $ws10
+
+bindsym $mod+Prior		workspace prev
+bindsym $mod+Shift+Prior	move container to workspace prev
+
+bindsym $mod+Next		workspace next
+bindsym $mod+Shift+Next		move container to workspace next
+
+bindsym $mod+Tab		workspace back_and_forth
+
+# bindsym $mod+XF86Back			workspace prev
+# bindsym $mod+Shift+XF86Back		move container to workspace prev
+
+# bindsym $mod+XF86Forward		workspace next
+# bindsym $mod+Shift+XF86Forward	move container to workspace next
+
+bindsym $mod+semicolon		workspace next
+
+bindsym $mod+apostrophe		split horizontal ;; exec $term
+
+bindsym $mod+slash		split vertical ;; exec $term
+bindsym $mod+Shift+slash	kill
+
+bindsym $mod+backslash		workspace back_and_forth
+
+
+#########################################################################################################################
+#                          # # # # # # --- letter key bindings --- # # # # # #                                          #
+#########################################################################################################################
+# bindsym $mod+a
+# bindsym $mod+Shift+a
+
+bindsym $mod+b 			bar mode toggle
+# bindsym $mod+Shift+b
+
+bindsym $mod+d			exec dmenu_run
+# bindsym $mod+Shift+d
+
+bindsym $mod+f 			fullscreen toggle
+# bindsym $mod+Shift+f
+
+# bindsym $mod+h 			exec $term; exec $term ; layout tabbed
+bindsym $mod+Shift+h		move left
+
+bindsym $mod+j			focus left
+bindsym $mod+Shift+j 		move down
+
+bindsym $mod+k 			focus up
+bindsym $mod+Shift+k 		move up
+
+# bindsym $mod+l
+bindsym $mod+Shift+l 		move right
+
+bindsym $mod+q 			kill
+# bindsym $mod+Shift+q
+
+# bindsym $mod+r		executes ranger; ~/.config/sxhkd/sxhkdrc
+bindsym $mod+Shift+r 		reload
+# needs binding for resize
+
+bindsym $mod+s 			scratchpad show
+bindsym $mod+Shift+s 		move scratchpad
+
+bindsym $mod+t 			layout tabbed
+bindsym $mod+Shift+t 		layout toggle split
+
+bindsym $mod+v			split toggle
+# bindsym $mod+Shift+v
+
+bindsym $mod+x 			mode "$mode_system"
+# bindsym $mod+Shift+x
+
+# bindsym $mod+z
+# bindsym $mod+Shift+z
+
+# mode_system configuration
+set $mode_system (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+mode "$mode_system" {
+	bindsym k exec --no-startup-id i3exit lock, mode "default"
+	bindsym l exec --no-startup-id i3exit logout, mode "default"
+	bindsym u exec --no-startup-id i3exit suspend, mode "default"
+	bindysm h exec --no-startup-id i3exit hibernate, mode "default"
+	bindsym r exec --no-startup-id i3exit reboot, mode "default"
+	bindsym s exec --no-startup-id i3exit shutdown, mode "default"
+
+	# Back to normal
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+#########################################################################################################################
+#   # # # # # # --- function key bindings(F1,etc) done in sxhkd config(~/.config/sxhkd/sxhkdrc) --- # # # # # #   #     #
+#########################################################################################################################
+
+# bindsym $mod+F1
+bindsym $mod+Shift+F1 	exec st
+
+bindsym $mod+F2 			exec st
+bindsym $mod+Shift+F2			pamixer -d 5
+
+# bindsym $mod+F3
+bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# bindsym $mod+F4
+# bindsym $mod+Shift+F4
+
+# bindsym $mod+F5
+# bindsym $mod+Shift+F5
+
+#########################################################################################################################
+#				# # # # # # --- arrow key bindings --- # # # # # #   					#
+#########################################################################################################################
+
+bindsym $mod+Left		focus left
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Ctrl+Left		move workspace to output left
+
+bindsym $mod+Down		focus down
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Ctrl+Down		move workspace to output down
+
+bindsym $mod+Up			focus up
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Ctrl+Up		move workspace to output up
+
+bindsym $mod+Right 		focus right
+bindsym $mod+Shift+Right 	move right
+bindsym $mod+Ctrl+Right		move workspace to output right
