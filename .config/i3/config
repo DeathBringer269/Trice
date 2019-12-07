@@ -22,7 +22,6 @@ set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono 10
 
 #########################################################################################################################
-<<<<<<< HEAD
 #				# # # # # # --- dropdown window configuration --- # # # # # #   			#
 #########################################################################################################################
 for_window [instance="dropdown_*"] floating enable
@@ -36,12 +35,8 @@ for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
 
 #########################################################################################################################
-#				# # # # # # --- Assign windows --- # # # # # # 					#
+#				# # # # # # --- Assign windows --- # # # # # # 						#
 #########################################################################################################################
-=======
-#				# # # # # # --- Assign windows --- # # # # # # 					#
-#########################################################################################################################
->>>>>>> 9f94716896f552175c736af6d4e63ddc2159c08e
 
 assign [class="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
@@ -77,7 +72,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "3: Games"
+set $ws10 "10: Games"
 
 #########################################################################################################################
 #                           # # # # # # --- Switch to workspace --- # # # # # #                                         #
@@ -186,18 +181,13 @@ bindsym $mod+h 			focus right
 bindsym $mod+Shift+h		exec --no-startup-id i3resize left
 
 bindsym $mod+i			gaps inner current minus 5
-<<<<<<< HEAD
 bindsym $mod+Shift+i		gaps inner current plus 5
-=======
-binsdym $mod+Shift+i		gaps inner current plus 5
->>>>>>> 9f94716896f552175c736af6d4e63ddc2159c08e
 
 bindsym $mod+j			focus left
 bindsym $mod+Shift+j 		exec --no-startup-id i3resize down
 
 bindsym $mod+k 			focus up
 bindsym $mod+Shift+k 		exec --no-startup-id i3resize up
-<<<<<<< HEAD
 
 bindsym $mod+l			focus down
 bindsym $mod+Shift+l 		exec --no-startup-id i3resize right
@@ -205,15 +195,6 @@ bindsym $mod+Shift+l 		exec --no-startup-id i3resize right
 bindsym $mod+o 			gaps outer current minus 5
 bindsym $mod+Shift+o		gaps outer current plus 5
 
-=======
-
-bindsym $mod+l		focus down
-bindsym $mod+Shift+l 		exec --no-startup-id i3-resize right
-
-bindsym $mod+o 			gaps outer current minus 5
-bindsym $mod+Shift+o		gaps outer current plus 5
-
->>>>>>> 9f94716896f552175c736af6d4e63ddc2159c08e
 bindsym $mod+q 			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
