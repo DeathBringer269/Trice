@@ -2,7 +2,6 @@
 #                          # # # # # # --- Config by Alan Dsilva --- # # # # # #					#
 #  # # # # # # --- References taken from configuration of Luke Smith<Voidrice>, Erik Dubois<ArcoLinux> --- # # # # # #	#
 #########################################################################################################################
-
 # Mod4 - Super key
 # Mod1 - Alt key
 # Control -Ctrl key
@@ -11,12 +10,13 @@
 # Return - Enter key
 # KP_Enter - Keypad Enter key
 # Tab - Tab key
+
 #########################################################################################################################
 #				# # # # # # --- Basic i3 configuration --- # # # # # # 					#
 #########################################################################################################################
 for_window [class="^.*"] border pixel 2
-gaps inner 10
-gaps outer 10
+gaps inner 2
+gaps outer 2
 set $mod Mod4
 set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono 10
@@ -37,7 +37,6 @@ for_window [instance="dropdown_*"] move position center
 #########################################################################################################################
 #				# # # # # # --- Assign windows --- # # # # # # 						#
 #########################################################################################################################
-
 assign [class="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Steam"] $ws10
