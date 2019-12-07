@@ -4,18 +4,6 @@ Majority of this config is derived from Luke Smith's i3wm configuration[https://
 I have added a lot of tweaks to better suit my need.
 Named Trice because i use two machines, a desktop pc 'Lenovo ThinkCenter' and a laptop 'Lenovo ThinkPad', hence "Trice" !! Don't judge.
 
-Dependencies:
-	i3-gaps,"i3 window manager but with gaps!",
-	i3-bar, "status bar for i3"
-	sxhkd,"simple x hot key daemon. for key bindings unrelated to i3"
-	dmenu,
-	xcompmgr,"compositor to handle screen tearing" //may change to compton later
-	mpd, "music player daemon"
-	ncmpcpp, "terminal based music player"
-	ranger,"terminal based file manager"
-	conky,"system monitor"
-
-
 Configuration:
 Even though i use i3-gaps i have no gaps enabled at default!!
 I feel gaps are a waste of space especially when i am working, and going fullscreen each time is too bothersome.
