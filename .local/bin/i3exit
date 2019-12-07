@@ -6,10 +6,10 @@ case "$1" in
         betterlockscreen -l
         ;;
     logout)
-       	i3-msg exit
+       	mpc pause && i3-msg exit
         ;;
     suspend)
-        i3lock -B=sigma -k | systemctl suspend
+        mpc pause && i3lock -B=sigma -k -e | systemctl suspend
         ;;
     hibernate)
         systemctl hibernate
