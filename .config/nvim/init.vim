@@ -1,4 +1,3 @@
-source ~/.config/nvim/scripts/html.vim
 let mapleader =","
 
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
@@ -15,7 +14,7 @@ Plug 'junegunn/goyo.vim'
 " Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
 " Plug 'lukesmithxyz/vimling'
-" Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 " Plug 'kovetskiy/sxhkd-vim'
@@ -40,6 +39,9 @@ set clipboard+=unnamedplus
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Enter timestamp
+       map <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+
 " Goyo plugin makes text more readable when writing prose:
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
 
@@ -51,6 +53,7 @@ set clipboard+=unnamedplus
 
 " Nerd tree
 	map <leader>n :NERDTreeToggle<CR>
+        let NERDTreeShowHidden=1
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " vimling:
@@ -118,3 +121,6 @@ set clipboard+=unnamedplus
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 " Update binds when sxhkdrc is updated.
 	autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+
+source ~/.config/nvim/scripts/html.vim
+source ~/.config/nvim/scripts/css.vim
