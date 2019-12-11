@@ -8,17 +8,34 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+" Plugin to easily change surrounding parenthesis, quotes etc.Example: change 'x' to "x" etc
 Plug 'tpope/vim-surround'
+
+" Nerd tree plugin
 Plug 'scrooloose/nerdtree'
+
+" Distracion free mode mapped to <leader>f
 Plug 'junegunn/goyo.vim'
-" Plug 'PotatoesMaster/i3-vim-syntax'
+
+" Git plugins
 Plug 'jreybert/vimagit'
+Plug 'tpope/vim-fugitive'
+
+" vim addons plugins
 " Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
+
+" Toggle comments plugin. Mapped to gcc
 Plug 'tpope/vim-commentary'
+
+" Syntax plugins
+" Plug 'PotatoesMaster/i3-vim-syntax'
 " Plug 'kovetskiy/sxhkd-vim'
-Plug 'tpope/vim-fugitive'
+
+" Web plugins
+" Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 set bg=light
@@ -40,7 +57,8 @@ set clipboard+=unnamedplus
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Enter timestamp
-       map <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+       imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+       map <F2> <Esc>$v22hxa<F3>
 
 " Goyo plugin makes text more readable when writing prose:
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
