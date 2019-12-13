@@ -112,8 +112,8 @@ for_window [title="Default - Wine desktop"] floating enable
 #########################################################################################################################
 #                               # # # # # # --- Special key bindings --- # # # # # #                                    #
 #########################################################################################################################
-bindsym $mod+Return		exec $term
-# bindsym $mod+Shift+Return
+bindsym $mod+Return		          split horizontal ;; exec $term
+bindsym $mod+Shift+Return       exec --no-startup-id samedir
 
 bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space 		focus mode_toggle
@@ -145,7 +145,7 @@ bindsym $mod+semicolon		workspace next
 
 bindsym $mod+apostrophe		split horizontal ;; exec $term
 
-bindsym $mod+slash		split vertical ;; exec $term
+bindsym $mod+slash		    split vertical ;; exec $term
 bindsym $mod+Shift+slash	kill
 
 bindsym $mod+backslash		workspace back_and_forth
@@ -204,7 +204,7 @@ bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec -
 bindsym $mod+Shift+r 		reload
 # needs binding for resize
 
-bindsym $mod+s 			scratchpad show
+bindsym $mod+s 			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+s 		move scratchpad
 
 bindsym $mod+t 			layout tabbed
