@@ -1,4 +1,7 @@
 # Trice (incomplete!)
+
+# Note: add ranger config from ThinkCenterm m710q.(wallpaper setting )
+
 My Arch linux configuration files, specifically for i3 window manager.
 Majority of this config is derived from Luke Smith's i3wm configuration[https://github.com/LukeSmithxyz/voidrice].
 I have added a lot of tweaks to better suit my need.
