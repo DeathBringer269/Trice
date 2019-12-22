@@ -2,6 +2,7 @@
 
 # Note: add ranger config from ThinkCenterm m710q.(wallpaper setting )
 # modify vimwiki to point to Document/Notes instead of home folder
+# create alias to remove files to a temp directory until cleared
 
 My Arch linux configuration files, specifically for i3 window manager.
 Majority of this config is derived from Luke Smith's i3wm configuration[https://github.com/LukeSmithxyz/voidrice].
