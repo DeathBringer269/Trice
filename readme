@@ -1,6 +1,6 @@
 # Trice (incomplete!)
 
-# Note: add ranger config from ThinkCenterm m710q.(wallpaper setting )
+# Note:
 # modify vimwiki to point to Document/Notes instead of home folder
 # create alias to remove files to a temp directory until cleared
 
@@ -12,7 +12,9 @@ Named Trice because i use two machines, a desktop pc 'Lenovo ThinkCenter' and a 
 Configuration:
 Even though i use i3-gaps i have no gaps enabled at default!!
 I feel gaps are a waste of space especially when i am working, and going fullscreen each time is too bothersome.
-I use Luke's build of "st" terminal emulator. The bindings are super easy once you figure them out and it has cool exclusive features added by Luke himself.
+I use Luke's build of "st" terminal emulator.
 
 i3-movement:
 I have remaped $mod+h/j keys to move left(horizontal) and $mod+k/l to move up(vertical).It just feels right. Your finger will be on 'j' most of the time, most of the time when you open a window it will be a second window to your right, you will feel the need to go to the left window, thus the 'j'.
+
+Note: set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path
