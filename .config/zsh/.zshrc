@@ -1,11 +1,24 @@
 # Luke's config for the Zoomer Shell
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+# Start of Oh-my-zsh configuration
+export ZSH=$HOME/.oh-my-zsh
+# ZSH_THEME="avit"
+ZSH_THEME="juanghurtado"
+# ZSH_THEME="bira"
+plugin=(
+    git
+)
+source $ZSH/oh-my-zsh.sh
+
+# End of Oh-my-zsh configuration
 
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -66,6 +79,9 @@ lfcd () {
 }
 
 bindkey -s '^o' 'lfcd\n'  # zsh
+
+## Extra (bug)
+clear
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
