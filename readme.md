@@ -15,7 +15,7 @@ Even though i use i3-gaps i have no gaps enabled at default!!
 I feel gaps are a waste of space especially when i am working, and going fullscreen each time is too bothersome.
 I use Luke's build of "st" terminal emulator.
 
-![Screenshot](Pictures/Screenshot/full-20191213-12:05:13.png)
+![Screenshot](Pictures/Screenshots/full-20191213-12:05:13.png)
 
 i3-movement:
 I have remaped `$mod+h/j` keys to move left(horizontal) and `$mod+k/l` to move up(vertical).It just feels right. Your finger will be on 'j' most of the time, most of the time when you open a window it will be a second window to your right, you will feel the need to go to the left window, thus the 'j'.
