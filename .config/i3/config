@@ -126,19 +126,19 @@ bindsym $mod+space 		focus mode_toggle
 # bindsym $mod+Escape
 # bindsym $mod+Shift+Escape
 
-bindsym $mod+Home		workspace $ws1
+bindsym $mod+Home		    workspace $ws1
 bindsym $mod+Shift+Home		move container to workspace $ws1
 
-bindsym $mod+End		workspace $ws10
+bindsym $mod+End		    workspace $ws10
 bindsym $mod+Shift+End		move container to workspace $ws10
 
-bindsym $mod+Prior		workspace prev
+bindsym $mod+Prior		    workspace prev
 bindsym $mod+Shift+Prior	move container to workspace prev
 
-bindsym $mod+Next		workspace next
+bindsym $mod+Next		    workspace next
 bindsym $mod+Shift+Next		move container to workspace next
 
-bindsym $mod+Tab		workspace back_and_forth
+bindsym $mod+Tab		    workspace back_and_forth
 
 # bindsym $mod+XF86Back			workspace prev
 # bindsym $mod+Shift+XF86Back		move container to workspace prev
@@ -148,9 +148,9 @@ bindsym $mod+Tab		workspace back_and_forth
 
 bindsym $mod+semicolon		workspace next
 
-bindsym $mod+apostrophe		split horizontal ;; exec $term
+bindsym $mod+apostrophe		split horizontal ;; exec $term ;; split vertical
 
-bindsym $mod+slash		    split vertical ;; exec $term
+bindsym $mod+slash		    split vertical ;; exec $term ;; split horizontal
 bindsym $mod+Shift+slash	kill
 
 bindsym $mod+backslash		workspace back_and_forth
@@ -169,22 +169,22 @@ bindsym $mod+b 			bar mode toggle
 # bindsym $mod+c 			//open calender and other utils
 # bindsym $mod+Shift+c
 
-bindsym $mod+d			exec dmenu_run
+bindsym $mod+d			    exec dmenu_run
 # bindsym $mod+Shift+d
 
 # bindsym $mod+e
 # bindsym $mod+Shift+e
 
-bindsym $mod+f 			fullscreen toggle
+bindsym $mod+f 			    fullscreen toggle
 # bindsym $mod+Shift+f
 
-bindsym $mod+g 			gaps inner current set 0; gaps outer current set 0
+bindsym $mod+g 			    gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+g 		gaps inner current set 10; gaps outer current set 10
 
-bindsym $mod+h 			focus right
+bindsym $mod+h 			    focus right
 bindsym $mod+Shift+h		move left
 
-bindsym $mod+i			gaps inner current minus 5
+bindsym $mod+i			    gaps inner current minus 5
 bindsym $mod+Shift+i		gaps inner current plus 5
 
 bindsym $mod+j			focus left
@@ -193,34 +193,34 @@ bindsym $mod+Shift+j 		move down
 bindsym $mod+k 			focus up
 bindsym $mod+Shift+k 		move up
 
-bindsym $mod+l			focus down
+bindsym $mod+l			    focus down
 bindsym $mod+Shift+l 		move right
 
-bindsym $mod+o 			gaps outer current minus 5
+bindsym $mod+o 			    gaps outer current minus 5
 bindsym $mod+Shift+o		gaps outer current plus 5
 # exec --no-startup-id i3resize left
 # exec --no-startup-id i3resize down
 # exec --no-startup-id i3resize up
 # exec --no-startup-id i3resize right
-bindsym $mod+q 			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+bindsym $mod+q 			    [con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
-# bindsym $mod+r		executes ranger; ~/.config/sxhkd/sxhkdrc
+# bindsym $mod+r		    executes ranger; ~/.config/sxhkd/sxhkdrc
 bindsym $mod+Shift+r 		reload
 # needs binding for resize
 
-bindsym $mod+s 			exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+s 			    exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+s 		move scratchpad
 
-bindsym $mod+t 			layout tabbed
+bindsym $mod+t 			    layout tabbed
 bindsym $mod+Shift+t 		layout toggle split
 
-bindsym $mod+u 			exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+u 			    exec --no-startup-id ddspawn tmuxdd
 
-bindsym $mod+v			split toggle
+bindsym $mod+v			    split toggle
 # bindsym $mod+Shift+v
 
-bindsym $mod+x 			mode "$mode_system"
+bindsym $mod+x 			    mode "$mode_system"
 # bindsym $mod+Shift+x
 
 # bindsym $mod+z
