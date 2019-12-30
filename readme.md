@@ -1,8 +1,8 @@
 # Trice (incomplete!)
 
 #### Note:
-Modify vimwiki to point to Document/Notes instead of home folder.&nbsp
-Create alias to remove files to a temp directory until cleared.$nbsp
+Modify vimwiki to point to Document/Notes instead of home folder. &nbsp;
+Create alias to remove files to a temp directory until cleared.\
 Set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path.&nbsp
 
 ## My Arch linux configuration files, specifically for i3 window manager.
