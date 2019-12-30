@@ -1,9 +1,9 @@
 # Trice (incomplete!)
 
 #### Note:
-modify vimwiki to point to Document/Notes instead of home folder
-create alias to remove files to a temp directory until cleared
-set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path
+Modify vimwiki to point to Document/Notes instead of home folder.&nbsp
+Create alias to remove files to a temp directory until cleared.$nbsp
+Set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path.&nbsp
 
 ## My Arch linux configuration files, specifically for i3 window manager.
 Majority of this config is derived from [Luke Smith's i3wm configuration.](https://github.com/LukeSmithxyz/voidrice).
