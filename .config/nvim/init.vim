@@ -33,8 +33,11 @@ Plug 'tpope/vim-commentary'
 " Plug 'PotatoesMaster/i3-vim-syntax'
 " Plug 'kovetskiy/sxhkd-vim'
 
-""" Web plugins
+""" Web Development
 " Plug 'mattn/emmet-vim'
+
+" vim indent lines
+" Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -51,6 +54,18 @@ set clipboard+=unnamedplus
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+	" set cursorline
+	" set lazyredraw
+
+" Indent configuration
+  set tabstop=4
+  set softtabstop=4
+  set shiftwidth=4
+  set noexpandtab
+
+" Custom bindings
+	nnoremap j gj
+	nnoremap k gk
 
 " Enable autocompletion:
 	set wildmode=longest,list,full
@@ -62,14 +77,8 @@ set clipboard+=unnamedplus
     nnoremap :Q :q!
 
 " Enter timestamp
-    imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+    imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
     map <F2> <Esc>$v22hxa<F3>
-
-" Tab settings
-    set tabstop=4
-	set softtabstop=0
-	set shiftwidth=4
-	set expandtab
 
 " Goyo plugin makes text more readable when writing prose:
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
