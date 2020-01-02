@@ -8,16 +8,17 @@ Named Trice because i use two machines, a desktop pc 'Lenovo ThinkCenter' and a 
 
 ## Configuration:
 Even though i use i3-gaps i have no gaps enabled at default!!\
-I feel gaps are a waste of space especially when i am working, and going fullscreen each time is too bothersome.\
+Working with i3 for a lot of time I feel gaps are just a waste of space, i had the need to go fullscreen a lot of times which is too bothersome. I have a special mapping to enable gaps temporarily for a session.\
 
 ## Applications
 List of applications i use. See [applications](applications.csv).
 
 ![Screenshot](Pictures/Screenshots/full-20191213-12:05:13.png)
 
-## i3-movement:
-Note: this is the originallmapping of i3. except h and l are not mapped
-(I have remaped `$mod+h/j` keys to move left(horizontal) and `$mod+k/l` to move up(vertical).\
-It just feels right.\)
-(Your finger will be on 'j' most of the time, most of the time when you open a window it will be a second window to your right, you will feel the need to go to the left window, thus the 'j'.\)
-Although i may change this later on.\
+## Usability.
+### Note: All keys are preceded by $mod/Super/etc...\
+### Reload i3 is mapped to $mod+F12\
+####See [commands](commands.csv) for complete list.\
+I use original i3 bindings for moving around windows, `j` to move horizontally and `k` to move vertically.\
+Additionally i have mapped `h` and `l` to do the same.\
+The arrow keys perform the same action `left`,`up`,`down`,`right` to move `left`,`up`,`down`,`right` respectively.\
