@@ -35,18 +35,18 @@ for_window [instance="dropdown_*"] move scratchpad
 for_window [instance="dropdown_*"] sticky enable
 for_window [instance="dropdown_*"] scratchpad show
 for_window [instance="dropdown_tmuxdd"] resize set 625 450
-for_window [instance="dropdown_dropdowncalc"] resize set 800 300
+# for_window [instance="dropdown_dropdowncalc"] resize set 800 300
 for_window [instance="dropdown_tmuxdd"] border pixel 3
-for_window [instance="dropdown_dropdowncalc"] border pixel 2
+# for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
 
 #########################################################################################################################
 #				# # # # # # --- Assign windows --- # # # # # # 						#
 #########################################################################################################################
-assign [class="firefox"] $ws2
-assign [class="Google-chrome"] $ws2
-assign [class="Steam"] $ws10
-assign [class="Telegram"] $ws9
+assign [class="firefox"]        $ws2
+assign [class="Google-chrome"]  $ws2
+assign [class="Steam"]          $ws10
+assign [class="Telegram"]       $ws9
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
@@ -69,15 +69,15 @@ bar {
 #########################################################################################################################
 #                            # # # # # # --- Workspace configuration --- # # # # # #                                    #
 #########################################################################################################################
-set $ws1 "1: General"
-set $ws2 "2: Web"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8: Music"
-set $ws9 "9: Social"
+set $ws1  "1: General"
+set $ws2  "2: Web"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8: Music"
+set $ws9  "9: Social"
 set $ws10 "10: Games"
 
 #########################################################################################################################
@@ -167,74 +167,98 @@ bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-
 #########################################################################################################################
 #                          # # # # # # --- letter key bindings --- # # # # # #                                          #
 #########################################################################################################################
-# bindsym $mod+a 		//luke has set to calculator;  i switch to gui based calc
+# bindsym $mod+a 		    //No bindings yet. Open to suggestions.
 # bindsym $mod+Shift+a
 
-bindsym $mod+b 			bar mode toggle
+bindsym $mod+b 			    bar mode toggle
 # bindsym $mod+Shift+b
 
 # bindsym $mod+c 			//open calender and other utils
 # bindsym $mod+Shift+c
 
-bindsym $mod+d			exec --no-startup-id dmenu_run
+bindsym $mod+d			    exec --no-startup-id dmenu_run
 # bindsym $mod+Shift+d
 
-# bindsym $mod+e
+# bindsym $mod+e           //No bindings yet. Open to suggestions
 # bindsym $mod+Shift+e
 
-bindsym $mod+f 			fullscreen toggle
+bindsym $mod+f 			    fullscreen toggle
 # bindsym $mod+Shift+f
 
-bindsym $mod+g 			gaps inner current set 0; gaps outer current set 0
+bindsym $mod+g 			    gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+g 		gaps inner current set 10; gaps outer current set 10
 
-bindsym $mod+h 			focus right
+bindsym $mod+h 			    focus right
 bindsym $mod+Shift+h		move left
 
-bindsym $mod+i			gaps inner current minus 5
+bindsym $mod+i			    gaps inner current minus 5
 bindsym $mod+Shift+i		gaps inner current plus 5
 
-bindsym $mod+j			focus left
+bindsym $mod+j			    focus left
 bindsym $mod+Shift+j 		move down
 
-bindsym $mod+k 			focus up
+bindsym $mod+k 			    focus up
 bindsym $mod+Shift+k 		move up
 
-bindsym $mod+l			focus down
+bindsym $mod+l			    focus down
 bindsym $mod+Shift+l 		move right
 
-bindsym $mod+o 			gaps outer current minus 5
+bindsym $mod+o 			    gaps outer current minus 5
 bindsym $mod+Shift+o		gaps outer current plus 5
-# exec --no-startup-id i3resize left
-# exec --no-startup-id i3resize down
-# exec --no-startup-id i3resize up
-# exec --no-startup-id i3resize right
+
 bindsym $mod+q 			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
-bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
+bindsym $mod+Shift+q	[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
 # bindsym $mod+r		executes ranger; ~/.config/sxhkd/sxhkdrc
-# bindsym $mod+Shift+r 		reload
-# needs binding for resize
+bindsym $mod+Shift+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym h exec --no-startup-id i3resize left ;; exec dunstify -r 102 "Resized left"
+        bindsym j exec --no-startup-id i3resize down ;; exec dunstify -r 102 "Resized down"
+        bindsym k exec --no-startup-id i3resize up ;; exec dunstify -r 102 "Resized up"
+        bindsym l exec --no-startup-id i3resize right ;; exec dunstify -r 102 "Resized right"
+
+        # same bindings, but for the arrow keys
+        bindsym Left  exec --no-startup-id i3resize left ;; exec dunstify -r 102 "Resized left"
+        bindsym Down  exec --no-startup-id i3resize down ;; exec dunstify -r 102 "Resized down"
+        bindsym Up    exec --no-startup-id i3resize up ;; exec dunstify -r 102 "Resized up"
+        bindsym Right exec --no-startup-id i3resize right ;; exec dunstify -r 102 "Resized right"
+
+        # same bindings but when your hand stays on $mod. It gets annoying
+        bindsym $mod+h exec --no-startup-id i3resize left ;; exec dunstify -r 102 "Resized left"
+        bindsym $mod+j exec --no-startup-id i3resize down ;; exec dunstify -r 102 "Resized down"
+        bindsym $mod+k exec --no-startup-id i3resize up ;; exec dunstify -r 102 "Resized up"
+        bindsym $mod+l exec --no-startup-id i3resize right ;; exec dunstify -r 102 "Resized right"
+
+        # Exit resize mode
+        bindsym Return             mode "default"
+        bindsym Escape             mode "default"
+		# Exit but you forget how to
+		bindsym $mod+Shift+r       mode "default"
+		# Exit when you are frustated and press random keys. Open to suggestions.
+        bindsym $mod+Return        mode "default"
+		bindsym $mod+Shift+Return  mode "default"
+}
 
 bindsym $mod+s 			    exec --no-startup-id ddspawn tmuxdd
-bindsym $mod+Shift+s 		move scratchpad
+# bindsym $mod+Shift+s 		move scratchpad
 
 bindsym $mod+t 			    layout tabbed
 bindsym $mod+Shift+t 		layout toggle split
 
-bindsym $mod+u 			    exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+u               exec --no-startup-id ddspawn tmuxdd
 
 # bindsym $mod+v
 bindsym $mod+Shift+v         split toggle
 
-bindsym $mod+x 			    mode "$mode_system"
+bindsym $mod+x 			     mode "$mode_system"
 # bindsym $mod+Shift+x
 
 # bindsym $mod+z
 # bindsym $mod+Shift+z
 
 # mode_system configuration
-set $mode_system (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown Note: fix hibernate
 mode "$mode_system" {
 	bindsym k exec --no-startup-id i3exit lock, mode "default"
 	bindsym l exec --no-startup-id i3exit logout, mode "default"
@@ -246,6 +270,7 @@ mode "$mode_system" {
 	# Back to normal
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
+	bindsym $mod+x mode "default"
 }
 #########################################################################################################################
 #   # # # # # # --- function key bindings(F1,etc) done in sxhkd config(~/.config/sxhkd/sxhkdrc) --- # # # # # #   #     #
@@ -254,11 +279,11 @@ mode "$mode_system" {
 # bindsym $mod+F1
 # bindsym $mod+Shift+F1 	exec st
 
-bindsym $mod+F2 			exec st
-bindsym $mod+Shift+F2			pamixer -d 5
+# bindsym $mod+F2 			exec st
+# bindsym $mod+Shift+F2			pamixer -d 5
 
 # bindsym $mod+F3
-bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
+# bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # bindsym $mod+F4
 # bindsym $mod+Shift+F4
@@ -266,24 +291,25 @@ bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym $mod+F5
 # bindsym $mod+Shift+F5
 
+# Reload i3 window manager
 bindsym $mod+F12                reload
 
 #########################################################################################################################
 #				# # # # # # --- arrow key bindings --- # # # # # #   					#
 #########################################################################################################################
 
-bindsym $mod+Left		focus left
+bindsym $mod+Left		    focus left
 bindsym $mod+Shift+Left		move left
 bindsym $mod+Ctrl+Left		move workspace to output left
 
-bindsym $mod+Down		focus down
+bindsym $mod+Down		    focus down
 bindsym $mod+Shift+Down		move down
 bindsym $mod+Ctrl+Down		move workspace to output down
 
-bindsym $mod+Up			focus up
+bindsym $mod+Up			    focus up
 bindsym $mod+Shift+Up		move up
 bindsym $mod+Ctrl+Up		move workspace to output up
 
-bindsym $mod+Right 		focus right
+bindsym $mod+Right 		    focus right
 bindsym $mod+Shift+Right 	move right
 bindsym $mod+Ctrl+Right		move workspace to output right
