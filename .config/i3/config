@@ -46,7 +46,7 @@ for_window [instance="dropdown_*"] move position center
 assign [class="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Steam"] $ws10
-assign [class="Telegram" $ws9
+assign [class="Telegram"] $ws9
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
