@@ -1,0 +1,10 @@
+#Category,Applications,COMMENT
+Graphical User Interface,i3-gaps,"i3 window manager but with gaps"
+,xfce4,"lightweight desktop environment"
+Status bar for i3,i3blocks,""
+Terminal Emulator,st,"suckless terminal, Luke Smith's build"
+,urxvt,"rxvt-unicode as fallback terminal"
+Shell,zsh,"a better shell with cool features"
+
+
+
