@@ -11,7 +11,7 @@ Even though i use i3-gaps i have no gaps enabled at default!!\
 I feel gaps are a waste of space especially when i am working, and going fullscreen each time is too bothersome.\
 
 ## Applications
-List of applications i use. See applications.csv
+List of applications i use. See [applications](applications.csv).
 
 ![Screenshot](Pictures/Screenshots/full-20191213-12:05:13.png)
 
