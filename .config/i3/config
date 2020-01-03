@@ -1,5 +1,5 @@
 #########################################################################################################################
-#                          # # # # # # --- Config by Alan Dsilva --- # # # # # #					                    #
+#                          # # # # # # --- Config by Alan Dsilva --- # # # # # #					#
 # Refrences taken from:
 # Luke Smiths i3 config
 # Arco linux i3 config by Eric Dubois
@@ -45,8 +45,9 @@ for_window [instance="dropdown_*"] move position center
 #########################################################################################################################
 assign [class="firefox"]        $ws2
 assign [class="Google-chrome"]  $ws2
-assign [class="Steam"]          $ws10
+assign [class="Org.gnome.Nautilus"] $ws3
 assign [class="Telegram"]       $ws9
+assign [class="Steam"]          $ws10
 
 #########################################################################################################################
 #					# # # # # # --- Status bar --- # # # # # # 					#
@@ -71,8 +72,8 @@ bar {
 #########################################################################################################################
 set $ws1  "1: General"
 set $ws2  "2: Web"
-set $ws3  "3"
-set $ws4  "4"
+set $ws3  "3: General"
+set $ws4  "4: Files"
 set $ws5  "5"
 set $ws6  "6"
 set $ws7  "7"
@@ -94,9 +95,9 @@ bindsym $mod+8		workspace $ws8
 bindsym $mod+9		workspace $ws9
 bindsym $mod+0		workspace $ws10
 
-#################################################################################################################################
-# # # # # # --- Move to workspace --- # # # # # #
-#################################################################################################################################
+#########################################################################################################################
+# 				# # # # # # --- Move to workspace --- # # # # # #                                       #
+#########################################################################################################################
 bindsym $mod+Shift+1	move container to workspace $ws1  ;; exec --no-startup-id notify-send "moved to workspace 1"
 bindsym $mod+Shift+2	move container to workspace $ws2  ;; exec --no-startup-id notify-send "moved to workspace 2"
 bindsym $mod+Shift+3	move container to workspace $ws3  ;; exec --no-startup-id notify-send "moved to workspace 3"
@@ -107,8 +108,6 @@ bindsym $mod+Shift+7	move container to workspace $ws7  ;; exec --no-startup-id n
 bindsym $mod+Shift+8	move container to workspace $ws8  ;; exec --no-startup-id notify-send "moved to workspace 8"
 bindsym $mod+Shift+9	move container to workspace $ws9  ;; exec --no-startup-id notify-send "moved to workspace 9"
 bindsym $mod+Shift+0	move container to workspace $ws10  ;; exec --no-startup-id notify-send "moved to workspace 10"
-
-
 
 #########################################################################################################################
 #                           # # # # # # --- Application configuration --- # # # # # #                                   #
@@ -277,13 +276,13 @@ mode "$mode_system" {
 #########################################################################################################################
 
 # bindsym $mod+F1
-# bindsym $mod+Shift+F1 	exec st
+# bindsym $mod+Shift+F1
 
-# bindsym $mod+F2 			exec st
-# bindsym $mod+Shift+F2			pamixer -d 5
+# bindsym $mod+F2
+# bindsym $mod+Shift+F2
 
 # bindsym $mod+F3
-# bindsym $mod+Shift+F3			pactl set-sink-volume @DEFAULT_SINK@ +5%
+# bindsym $mod+Shift+F3
 
 # bindsym $mod+F4
 # bindsym $mod+Shift+F4
@@ -298,18 +297,18 @@ bindsym $mod+F12                reload
 #				# # # # # # --- arrow key bindings --- # # # # # #   					#
 #########################################################################################################################
 
-bindsym $mod+Left		    focus left
+bindsym $mod+Left		focus left
 bindsym $mod+Shift+Left		move left
 bindsym $mod+Ctrl+Left		move workspace to output left
 
-bindsym $mod+Down		    focus down
+bindsym $mod+Down		focus down
 bindsym $mod+Shift+Down		move down
 bindsym $mod+Ctrl+Down		move workspace to output down
 
-bindsym $mod+Up			    focus up
+bindsym $mod+Up			focus up
 bindsym $mod+Shift+Up		move up
 bindsym $mod+Ctrl+Up		move workspace to output up
 
-bindsym $mod+Right 		    focus right
+bindsym $mod+Right 		focus right
 bindsym $mod+Shift+Right 	move right
 bindsym $mod+Ctrl+Right		move workspace to output right
