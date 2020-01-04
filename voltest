@@ -1,7 +1,12 @@
-MUTE=0
+# !/usr/bin/env sh
+
+MUTE=1
 amixer get Master | grep "\[on\]" >/dev/null && MUTE=0
+# echo "here"
+amixer get Master | grep "\[off\]" >/dev/null && MUTE=1
 if test $MUTE == 0; then
 	notify-send "not muted"
 else
 	notify-send "muted"
+	mpc pause >/dev/null
 fi
