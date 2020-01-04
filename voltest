@@ -1,0 +1,7 @@
+MUTE=0
+amixer get Master | grep "\[on\]" >/dev/null && MUTE=0
+if test $MUTE == 0; then
+	notify-send "not muted"
+else
+	notify-send "muted"
+fi
