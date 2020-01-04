@@ -1,4 +1,4 @@
-Needs fix,Source,Bindings,Action
+fix,Source,Bindings,Action
 ,,super + a,"calculator"
 ,,super + shift + a,"alsamixer"
 ,,super + b,"bar toggle"
