@@ -15,6 +15,7 @@
 # Return - Enter key
 # KP_Enter - Keypad Enter key
 # Tab - Tab key
+# space - Space bar
 
 #########################################################################################################################
 #				# # # # # # --- Basic i3 configuration --- # # # # # # 					#
@@ -22,7 +23,7 @@
 for_window [class="^.*"] border pixel 2
 gaps inner 0
 gaps outer 0
-smart_borders on
+# smart_borders on
 set $mod Mod4
 set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono 10
@@ -126,8 +127,8 @@ for_window [title="Default - Wine desktop"] floating enable
 bindsym $mod+Return		          split horizontal ;; exec $term
 bindsym $mod+Shift+Return       exec --no-startup-id samedir
 
+bindsym $mod+space 		    focus mode_toggle
 bindsym $mod+Shift+space 	floating toggle
-bindsym $mod+space 		focus mode_toggle
 
 # bindsym $mod+Escape
 # bindsym $mod+Shift+Escape
