@@ -6,3 +6,4 @@
 - [ ] Create alias to remove files to a temp directory until cleared.\
 - [ ] Set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path.\
 - [ ] create volume script. pause music when muted
+- [ ] create dependency list

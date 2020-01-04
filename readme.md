@@ -1,6 +1,7 @@
 # Trice!!!! Nearing Perfection
 
 ## My Arch linux configuration files, specifically for i3 window manager.
+### Note: See [commands](commands.csv) for list of bindings.
 Majority of this config is derived from [Luke Smith's i3wm configuration](https://github.com/LukeSmithxyz/voidrice).\
 I have derived my config from a lot of different [sources](sources.md).\
 I have made a lot of major changes.
@@ -13,6 +14,7 @@ Working with i3 for a lot of time I feel gaps are just a waste of space, i had t
 ## Applications
 List of applications i use. See [applications](applications.csv).
 
+## Preview
 ![Screenshot](Pictures/Screenshots/full-20191213-12:05:13.png)
 
 ## Usability.
