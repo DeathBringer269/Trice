@@ -20,7 +20,7 @@ List of applications i use. See [applications](applications.csv).
 ## Usability.
 ### Note: All keys are preceded by $mod/Super/etc...\
 ### Reload i3 is mapped to $mod+F12\
-####See [commands](commands.csv) for complete list.\
+#### See [commands](commands.csv) for complete list.\
 I use original i3 bindings for moving around windows, `j` to move horizontally and `k` to move vertically.\
 Additionally i have mapped `h` and `l` to do the same.\
 The arrow keys perform the same action `left`,`up`,`down`,`right` to move `left`,`up`,`down`,`right` respectively.\
