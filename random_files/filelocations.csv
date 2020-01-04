@@ -1,0 +1,4 @@
+filename, path to directory, purpose
+30-touchpad.conf, /etc/X11/xorg.conf.d/30-touchpad.conf, "trackpad configuration"
+issue, /etc/issue, "Displays message on tty screen before prompt"
+
