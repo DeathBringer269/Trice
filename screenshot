@@ -1,6 +1,8 @@
 # Screenshot saving script by Alan Dsilva
 # Screenshots are saved in ~/Pictures/ScreenShots/ by default
 
+# Note mkdir has existing variable -p to make parents directories if they do not exist change the script!!
+
 DIR="/home/$USER/Pictures/Screenshots/"
 if [ -d "$DIR" ]; then
 	maim /home/$USER/Pictures/Screenshots/$(date '+%y%m%d-%H%M-%S').png
