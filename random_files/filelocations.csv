@@ -1,4 +1,8 @@
 filename, path to directory, purpose
 30-touchpad.conf, /etc/X11/xorg.conf.d/30-touchpad.conf, "trackpad configuration"
-issue, /etc/issue, "Displays message on tty screen before prompt"
+issue1, /etc/issue1, "message to be displayed on tty1 screen before prompt, requires getty@tty1 service to be modified."
+issue2, /etc/issue2, "message to be displayed on tty2 screen before prompt, requires getty@tty2 service to be modified."
+override.conf, /etc/systemd/system/getty@ttyx.service.d, "override file for ttyx, x is (1,2...)"
+exec.sh, - , "!!! run with sudo !!! script to automatically edit getty service"
+
 

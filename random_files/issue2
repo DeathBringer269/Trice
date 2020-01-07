@@ -2,6 +2,5 @@
 Welcome to Arch Linux \r (\l)
 Log date: \d
 Log time: \t
-Note:	tty1 configured to i3-gaps
-	tty2 configured to xfce4
+Note:	Opening xfce4
 ###
