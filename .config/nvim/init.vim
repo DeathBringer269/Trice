@@ -50,7 +50,7 @@ set clipboard+=unnamedplus
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
-	filetype plugin on
+	filetype plugin indent on
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
@@ -139,7 +139,7 @@ set clipboard+=unnamedplus
 
 " Copy selected text to system clipboard:
 	vnoremap <C-c> "+y
-	map <C-p> "+P
+	map <C-p> "+p
 
 " Save file as sudo on files that require root permission
 	cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
