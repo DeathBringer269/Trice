@@ -158,7 +158,7 @@ bindsym $mod+semicolon		workspace next
 bindsym $mod+apostrophe		split horizontal ;; exec $term
 
 bindsym $mod+slash		    split vertical ;; exec $term
-bindsym $mod+Shift+slash	kill
+bindsym $mod+Shift+slash    split vertical ;; exec --no-startup-id samedir
 
 bindsym $mod+backslash		workspace back_and_forth
 
@@ -167,7 +167,7 @@ bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-
 #########################################################################################################################
 #                          # # # # # # --- letter key bindings --- # # # # # #                                          #
 #########################################################################################################################
-# bindsym $mod+a 		    //No bindings yet. Open to suggestions.
+bindsym $mod+a 		        exec ~/dtest.sh
 # bindsym $mod+Shift+a
 
 bindsym $mod+b 			    bar mode toggle
