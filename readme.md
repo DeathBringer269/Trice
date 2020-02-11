@@ -1,4 +1,5 @@
 # Trice!!!! Nearing Perfection
+<span style="color:blue">TESTING</span>
 
 ## My Arch linux configuration files, specifically for i3 window manager.
 ### Note: See [commands](commands.csv) for list of bindings.
