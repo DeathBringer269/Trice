@@ -39,6 +39,11 @@ alias \
 # This alias is important. It enables the `pauseallmpv` command.
 alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 
+# Development shortcuts
+alias \
+	python="py" \
+	workspace="cd workspace && ls" \
+
 # Some other stuff
 alias \
 	magit="nvim -c MagitOnly" \
