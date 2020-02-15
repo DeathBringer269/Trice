@@ -41,7 +41,7 @@ alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 
 # Development shortcuts
 alias \
-	python="py" \
+	py="python" \
 	work="cd ~/workspace && ls" \
 
 # Git shortcuts
