@@ -42,7 +42,16 @@ alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 # Development shortcuts
 alias \
 	python="py" \
-	workspace="cd workspace && ls" \
+	work="cd ~/workspace && ls" \
+
+# Git shortcuts
+alias \
+	gs="git status" \
+	gp="git pull" \
+	ga="git add" \
+	gc="git commit" \
+	gb="git branch" \
+	# gpp="Add script here to promt yes/no confirmation to push" \
 
 # Some other stuff
 alias \
