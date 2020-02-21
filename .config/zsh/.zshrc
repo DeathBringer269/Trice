@@ -17,7 +17,6 @@ plugin=(
     git
 )
 source $ZSH/oh-my-zsh.sh
-
 # End of Oh-my-zsh configuration
 
 autoload -U compinit
