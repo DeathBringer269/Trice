@@ -42,6 +42,7 @@ mpd >/dev/null 2>&1 &
 
 # Start graphical server on tty1 if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
+[ "$(tty)" = "/dev/tty2" ] && ! pgrep -x Xorg >/dev/null && exec startxfce4
 
 # Switch escape and caps if tty and no passwd required:
 sudo -n loadkeys ~/.local/share/larbs/ttymaps.kmap 2>/dev/null
