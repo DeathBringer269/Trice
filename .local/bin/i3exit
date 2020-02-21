@@ -9,7 +9,7 @@ case "$1" in
        	mpc pause && i3-msg exit
         ;;
     suspend)
-        mpc pause && i3lock -B=sigma -k -e | systemctl suspend
+		mpc pause && i3lock -B=sigma -k -e --timepos="100:100" --timecolor=ffffffff --datecolor=ffffffff --indpos="200:100" --radius 25 --ring-width 3 | systemctl suspend
         ;;
     hibernate)
         systemctl hibernate
