@@ -1,7 +1,7 @@
 " Configuration file for html files
 " noremap <Space><Space> <Esc>/<++><Enter>"_c4l
 
-autocmd filetype html inoremap html; <!DOCTYPE html><Return><html><Return><head><Return><meta charset="UTF-8"><Return><meta name="viewport" content="width=device-width, initial-scale=1.0"><Return><meta http-equiv="X-UA-Compatible" content="ie=edge"><Return><title></title><Return><link><Return></head><Return><body><Return></body><Return></html><Esc>/<title><Return>6la
+autocmd filetype html inoremap html; <!DOCTYPE html><Return><html lang="en"><Return><head><Return><meta charset="UTF-8"><Return><meta name="viewport" content="width=device-width, initial-scale=1.0"><Return><meta http-equiv="X-UA-Compatible" content="ie=edge"><Return><title></title><Return><link><Return></head><Return><body><Return></body><Return></html><Esc>/<title><Return>6la
 
 " Note: map space space to find closing brackets instead of pointer because if you quit editing then pointer still remains.
 noremap <Space><Space> <Esc>/><<Enter>a
