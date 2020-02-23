@@ -7,4 +7,5 @@
 - [ ] Set lock and set wallpaper script in ranger config requires setbg and setlock scripts in path.\
 - [ ] create volume script. pause music when muted
 - [ ] create dependency list
-- [ ] create links to issue files instead of copying them
+- [ ] Fix lock - create custom script
+- [ ] Configure xautolock to activate after inactivity
