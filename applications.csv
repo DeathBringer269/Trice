@@ -1,4 +1,7 @@
 Category,Applications,COMMENT
+Package Manager, Yay, "To install dependencies"
+,xdg-user-dirs, "Optional aplication to create user dirs"
+,flat-remix, "Icon pack"
 Graphical User Interface,i3-gaps,"i3 window manager but with gaps"
 ,xfce4,"lightweight desktop environment"
 Status bar for i3,i3blocks,""
