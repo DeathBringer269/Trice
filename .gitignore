@@ -1,0 +1,36 @@
+#Important files to be ignored without fail
+.ssh/
+Downloads/*
+Documents/*
+Pictures/*
+Videos/*
+Music/*
+
+#Other
+.mozilla/
+.cache/
+.steam/
+.config/BraveSoftware/
+.config/calibre/
+
+#Other files
+.bash_history
+.bash_logout
+.zsh_history
+.zcompdump
+.viminfo.tmp
+.viminfo
+
+#Development related
+.android/
+src/
+.pub-cache/
+.npm
+.flutter
+.flutter_tool_state
+.gradle
+.python_history
+package-lock.json
+
+
+
