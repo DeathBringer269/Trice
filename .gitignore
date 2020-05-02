@@ -13,6 +13,10 @@ Music/*
 .config/BraveSoftware/
 .config/calibre/
 
+#Some files in these folders need to be ignored not all
+.local/*
+.config/*
+
 #Other files
 .bash_history
 .bash_logout
@@ -23,7 +27,6 @@ Music/*
 
 #Development related
 .android/
-src/
 .pub-cache/
 .npm
 .flutter
